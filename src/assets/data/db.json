@@ -1,0 +1,41 @@
+{
+  "product": [
+    {
+     "id": 1, 
+     "name": "shrit1",
+     "category_id": 1,
+     "descriptions": "description here",
+     "price":200,
+     "is_availble": true,
+     "rating":100,
+     "vendor_name": "agg shop",
+     "waranty":1
+     },
+      {
+     "id": 2, 
+     "name": "shrit1",
+     "category_id": 1,
+     "descriptions": "description here",
+     "price":200,
+     "is_availble": true,
+     "rating":100,
+     "vendor_name": "agg shop",
+     "waranty":1
+     },
+      {
+     "id": 3, 
+     "name": "shrit1",
+     "category_id": 1,
+     "descriptions": "description here",
+     "price":200,
+     "is_availble": true,
+     "rating":100,
+     "vendor_name": "agg shop",
+     "waranty":1
+     }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}
