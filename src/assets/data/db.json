@@ -1,40 +1,86 @@
 {
   "product": [
     {
-     "id": 1, 
-     "name": "shrit1",
-     "category_id": 1,
-     "descriptions": "description here",
+     "productID": 1, 
+     "productName": "Partry wear",
+     "categoryID": 4,
+     "description": "description  first here",
      "price":200,
      "is_availble": true,
-     "rating":100,
+     "productImg": " ./assets/first.jpeg",
+     "rating":3,
      "vendor_name": "agg shop",
      "waranty":1
      },
       {
-     "id": 2, 
-     "name": "shrit1",
-     "category_id": 1,
-     "descriptions": "description here",
+     "productID": 2, 
+     "productName": "shrit1",
+     "categoryID": 3,
+     "description": "description second here",
      "price":200,
      "is_availble": true,
-     "rating":100,
+     "productImg": "./assets/s2.jpg",
+     "rating":4,
      "vendor_name": "agg shop",
      "waranty":1
      },
       {
+     "productID": 3, 
+     "productName": "shrit1",
+     "categoryID": 1,
+     "description": "description third here",
+     "price":200,
+     "is_availble": true,
+     "productImg": "./assets/s3.jpg",
+     "rating":5,
+     "vendor_name": "agg shop",
+     "waranty":1
+     },
+         {
+     "productID": 3, 
+     "productName": "shrit1",
+     "categoryID": 3,
+     "description": "description third here",
+     "price":200,
+     "is_availble": true,
+     "productImg": "./assets/s3.jpg",
+     "rating":3,
+     "vendor_name": "agg shop",
+     "waranty":1
+     },
+         {
      "id": 3, 
-     "name": "shrit1",
-     "category_id": 1,
-     "descriptions": "description here",
+     "productName": "shrit1",
+     "categoryID": 2,
+     "description": "description third here",
      "price":200,
      "is_availble": true,
+     "productImg": "./assets/s3.jpg",
+     "rating":4,
+     "vendor_name": "agg shop",
+     "waranty":1
+     },
+         {
+     "productID": 3, 
+     "productName": "shrit1",
+     "categoryID": 2,
+     "description": "description third here",
+     "price":5,
+     "is_availble": true,
+     "productImg": "./assets/s3.jpg",
      "rating":100,
      "vendor_name": "agg shop",
      "waranty":1
      }
   ],
-  "comments": [
+  "categories": [
+    { "id": 1, "categoryName": "Electronics" },
+    { "id": 2, "categoryName": "Men" },
+    { "id": 3, "categoryName": "Women" },
+    { "id": 4, "categoryName": "Home & Furniture" },
+    { "id": 5, "categoryName": "Baby & kids" }
+  ],
+   "comments": [
     { "id": 1, "body": "some comment", "postId": 1 }
   ],
   "profile": { "name": "typicode" }

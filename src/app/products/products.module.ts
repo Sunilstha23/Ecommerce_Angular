@@ -9,9 +9,7 @@ import { DeleteProductComponent } from './delete-product/delete-product.componen
 import { ViewProductComponent } from './view-product/view-product.component';
 import { ViewAllProductComponent } from './view-all-product/view-all-product.component';
 import { ViewProductByDateComponent } from './view-product-by-date/view-product-by-date.component';
-import { ViewProductByCategoryComponent } from './view-product-by-category/view-product-by-category.component';
-
-
+import { ViewsProductByCategoryComponent } from './views-product-by-category/views-product-by-category.component';
 @NgModule({
   declarations: [
     ProductsComponent,
@@ -21,7 +19,7 @@ import { ViewProductByCategoryComponent } from './view-product-by-category/view-
     ViewProductComponent,
     ViewAllProductComponent,
     ViewProductByDateComponent,
-    ViewProductByCategoryComponent
+     ViewsProductByCategoryComponent
   ],
   imports: [
     CommonModule,

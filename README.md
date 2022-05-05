@@ -72,3 +72,38 @@ product which need to be load only loaded (which mean other component should not
 
 **BootStrap Theme**
 startBootStrap [click](https://startbootstrap.com/)
+
+### Routing Feacture module
+
+**ACtivatedRouted** it is used to get the state of route
+```JavaScript
+import { ActivatedRoute } from '@angular/router';
+
+  productID = 0;
+  constructor(private activatedRoute: ActivatedRoute) { }
+
+  ngOnInit(): void {
+    this.activatedRoute.params.subscribe(data => {
+      this.productID = data['id'];
+    })
+  }
+```
+params is the parameter of route which is store in data throung subscribe() method
+
+### Service in angular
+
+### interface
+to create interface go to product module in cmd and run `ng g interface product`
+
+__to use interface in module__
+``` Javascript
+import { Observable } from 'rxjs';
+import { Product } from './product';
+
+  createProduct(productBody):Observable<Product>{
+    const baseUrl = 'http://localhost:5000/product';
+    return this.httpClient.post(baseUrl, productBody);
+  }
+
+```
+where observable help to observe the type of data with bind interface product
