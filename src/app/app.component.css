@@ -4,3 +4,6 @@ body{
 footer{
     padding-top: 60px;
 }
+#sidebar{
+    background-color: darkgrey;
+}

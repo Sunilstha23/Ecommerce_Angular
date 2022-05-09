@@ -3,11 +3,14 @@ import { ActivatedRoute } from '@angular/router';
 import { Product } from '../product';
 import { ProductService } from '../product.service';
 
+declare function moeup(): void;
 @Component({
   selector: 'app-view-product',
   templateUrl: './view-product.component.html',
   styleUrls: ['./view-product.component.css']
 })
+  
+
 export class ViewProductComponent implements OnInit {
 
   productID = 0;
@@ -22,7 +25,6 @@ export class ViewProductComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(data => {
       this.productID = data['id'];
- 
       this.productService.viewProduct(this.productID).subscribe(viewData => {
         Object.assign(this.productData, viewData);
         // console.log(typeof (this.productData[0].categoryID));
@@ -35,4 +37,5 @@ export class ViewProductComponent implements OnInit {
       });
     });
   }
+  
 }
