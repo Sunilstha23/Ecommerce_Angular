@@ -13,6 +13,7 @@
             class="card-img-top"
             src="{{ product.productImg }}"
             alt="{{ product.productName }}"
+            height="150px"
           />
           <!-- Product details-->
           <div class="card-body p-4">
@@ -29,7 +30,6 @@
                 <small class="text-muted"
                   >&#9733; &#9733; &#9733; &#9733; &#9734;</small
                 >
-                <p class="card-text">{{ product.description }}</p>
               </div>
             </div>
           </div>
@@ -38,8 +38,8 @@
             <div class="text-center">
               <a
                 class="btn btn-outline-dark mt-auto"
-                routerLink="view-product/{{ product.productID }}"
-                >{{ product.productName }} >View options</a
+                routerLink="../../view-product/{{ product.productID }}"
+                >View options</a
               >
             </div>
           </div>

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { OrdersModule } from './orders/orders.module';
 import { SiteLayoutModule } from './site-layout/site-layout.module';
 import {HttpClientModule} from '@angular/common/http'
+
 @NgModule({
   declarations: [
     AppComponent

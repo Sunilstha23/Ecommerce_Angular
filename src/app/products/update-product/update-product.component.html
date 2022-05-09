@@ -1,1 +1,116 @@
-<h3>product id is {{ productID }}</h3>
+<h1 class="bg-light mb-2 text-center">Update a Product</h1>
+
+<form
+  class="row g-3"
+  (submit)="updateProduct(updateProductForm)"
+  #updateProductForm="ngForm"
+>
+  <div class="col-md-6">
+    <label for="validationServer03" class="form-label">Product Name</label>
+    <input
+      type="text"
+      class="form-control"
+      required
+      name="productName"
+      ngModel
+      [(ngModel)]="productDetails[0].productName"
+    />
+  </div>
+  <div class="col-md-3">
+    <label for="validationServer04" class="form-label">Category</label>
+    <select
+      class="form-select"
+      id="validationServer04"
+      aria-describedby="validationServer04Feedback"
+      required
+      ngModel
+      name="categoryID"
+      [(ngModel)]="productDetails[0].categoryID"
+    >
+      <option selected disabled value="">Choose...</option>
+      <option [ngValue]="1">Electronics</option>
+      <option [ngValue]="2">Men</option>
+      <option [ngValue]="3">Women</option>
+      <option [ngValue]="4">Home & Furniture</option>
+      <option [ngValue]="5">Baby & kids</option>
+    </select>
+  </div>
+  <div class="col-md-3">
+    <label for="validationServer04" class="form-label"> Is Avaiable </label>
+    <select
+      class="form-select"
+      id="validationServer04"
+      required
+      name="isAvailable"
+      ngModel
+      [(ngModel)]="productDetails[0].isAvailable"
+    >
+      <option selected disabled>Choose...</option>
+      <option [ngValue]="1">yes</option>
+      <option [ngValue]="2">No</option>
+    </select>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServer01" class="form-label"> Color </label>
+    <input
+      type="text"
+      class="form-control"
+      id="validationServer01"
+      required
+      name="color"
+      ngModel
+      [(ngModel)]="productDetails[0].color"
+    />
+  </div>
+
+  <div class="col-md-3">
+    <label for="validationServer04" class="form-label">Rating</label>
+    <select
+      class="form-select"
+      id="validationServer04"
+      aria-describedby="validationServer04Feedback"
+      required
+      name="rating"
+      ngModel
+      [(ngModel)]="productDetails[0].rating"
+    >
+      <option selected disabled value="">Choose...</option>
+      <option [ngValue]="1">1</option>
+      <option [ngValue]="2">2</option>
+      <option [ngValue]="3">3</option>
+      <option [ngValue]="4">4</option>
+      <option [ngValue]="5">5</option>
+    </select>
+  </div>
+
+  <div class="col-md-4">
+    <label for="validationServer01" class="form-label">Price</label>
+    <input
+      type="text"
+      class="form-control"
+      id="validationServerUsername"
+      aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback"
+      required
+      name="price"
+      ngModel
+      [(ngModel)]="productDetails[0].price"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="validationTextarea" class="form-label"> Description </label>
+    <textarea
+      class="form-control"
+      id="validationTextarea"
+      placeholder="product detail description"
+      required
+      name="description"
+      ngModel
+      [(ngModel)]="productDetails[0].description"
+    ></textarea>
+  </div>
+
+  <div class="mb-3">
+    <button class="btn btn-primary" type="submit">Update form</button>
+  </div>
+</form>

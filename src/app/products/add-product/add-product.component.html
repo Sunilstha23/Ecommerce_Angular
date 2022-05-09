@@ -1,23 +1,156 @@
-<form class="p-3">
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
+<h1 class="bg-light mb-2 text-center">Add New Product</h1>
+
+<form
+  class="row g-3"
+  (submit)="addNewProduct(addProductForm)"
+  #addProductForm="ngForm"
+>
+  <div class="col-md-6">
+    <label for="validationServer03" class="form-label">Product Name</label>
     <input
-      type="email"
+      type="text"
       class="form-control"
-      id="exampleInputEmail1"
-      aria-describedby="emailHelp"
+      required
+      name="productName"
+      ngModel
+      #productName="ngModel"
     />
-    <div id="emailHelp" class="form-text">
-      We'll never share your email with anyone else.
+    <div
+      class="alert alert-danger mt-2 mt-2"
+      *ngIf="productName.touched && !productName.valid"
+    >
+      please enter your product name
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationServer04" class="form-label">Category</label>
+    <select
+      class="form-select"
+      id="validationServer04"
+      aria-describedby="validationServer04Feedback"
+      required
+      ngModel
+      name="productCategory"
+      #productCategory="ngModel"
+    >
+      <option selected disabled value="">Choose...</option>
+      <option [ngValue]="1">Electronics</option>
+      <option [ngValue]="2">Men</option>
+      <option [ngValue]="3">Women</option>
+      <option [ngValue]="4">Home & Furniture</option>
+      <option [ngValue]="5">Baby & kids</option>
+    </select>
+    <div
+      class="alert alert-danger mt-2"
+      *ngIf="productCategory.value == '' && productCategory.touched"
+    >
+      Please select a Category of product.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationServer04" class="form-label"> Is Avaiable </label>
+    <select
+      class="form-select"
+      id="validationServer04"
+      required
+      name="productIsAvaiable"
+      ngModel
+      #productIsAvaiable="ngModel"
+      ng-model="instructor.isActive"
+    >
+      <option selected disabled [ngValue]="null">Choose...</option>
+      <option [ngValue]="1">yes</option>
+      <option [ngValue]="2">No</option>
+    </select>
+    <div
+      class="alert alert-danger mt-2"
+      *ngIf="productIsAvaiable.touched && productIsAvaiable.value == 'null'"
+    >
+      Avaiable product.
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationServer01" class="form-label"> Color </label>
+    <input
+      type="text"
+      class="form-control"
+      id="validationServer01"
+      required
+      name="productColor"
+      ngModel
+      #productColor="ngModel"
+    />
+    <div
+      class="alert alert-danger mt-2"
+      *ngIf="productColor.touched && !productColor.valid"
+    >
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationServer04" class="form-label">Rating</label>
+    <select
+      class="form-select"
+      id="validationServer04"
+      aria-describedby="validationServer04Feedback"
+      required
+      name="productRating"
+      ngModel
+      #productRating="ngModel"
+    >
+      <option selected disabled value="">Choose...</option>
+      <option [ngValue]="1">1</option>
+      <option [ngValue]="2">2</option>
+      <option [ngValue]="3">3</option>
+      <option [ngValue]="4">4</option>
+      <option [ngValue]="5">5</option>
+    </select>
+    <div
+      class="alert alert-danger mt-2"
+      *ngIf="productRating.touched && productRating.value == ''"
+    >
+      Give Rating
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <label for="validationServer01" class="form-label">Price</label>
+    <input
+      type="text"
+      class="form-control"
+      id="validationServerUsername"
+      aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback"
+      required
+      name="productPrice"
+      ngModel
+      #productPrice="ngModel"
+    />
+    <div
+      class="alert alert-danger mt-2"
+      *ngIf="!productPrice.valid && productPrice.touched"
+    >
+      Please enter price.
     </div>
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" />
+    <label for="validationTextarea" class="form-label"> Description </label>
+    <textarea
+      class="form-control"
+      id="validationTextarea"
+      placeholder="product detail description"
+      required
+      name="productDescription"
+      ngModel
+      #productDescription="ngModel"
+    ></textarea>
+    <div
+      class="alert alert-danger mt-2"
+      *ngIf="productDescription.touched && !productDescription.valid"
+    >
+      Please enter description
+    </div>
   </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  <div class="mb-3">
+    <button class="btn btn-primary" type="submit">Submit form</button>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
 </form>

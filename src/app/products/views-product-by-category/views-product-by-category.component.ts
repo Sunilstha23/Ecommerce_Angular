@@ -26,6 +26,7 @@ export class ViewsProductByCategoryComponent implements OnInit {
       
       this.productService.searchCategoryProduct(this.searchCategory).subscribe(categoryData => {
         this.productList = categoryData;
+        console.log(this.productList);
       })
     })
   }

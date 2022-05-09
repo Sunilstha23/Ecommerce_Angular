@@ -1,13 +1,11 @@
 export interface Product {
-    productID: string;
-    categoryID: number;
+    productID?: number;
     productName: string;
+    categoryID: number;
     description: string;
-    rating: string;
     price: number;
-    productImg: string;
-    isAvailble: boolean;
+    isAvailable: boolean;
+    productImg?: string;
     color: string;
-    review: number;
-
+    rating: string;
 }

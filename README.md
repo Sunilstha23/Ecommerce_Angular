@@ -107,3 +107,36 @@ import { Product } from './product';
 
 ```
 where observable help to observe the type of data with bind interface product
+
+**forms in angular**
+---
+> in angular there is class call FormControl(for each input fill we can check the current value of input`value`, if value is touched or untouched `touched / untouched,` `dirty` which mean its value is changed,'pristine' as the vale is unchanged, `valid` for whether it's valid or not if not what is validation error`error`)
+
+> at validation to input by directives (template-driven) and code(reactivr=e form) where reactive is more control over validation logic ,good for compex forms and template driven is easier and less control.
+
+__template driven__
+ngModel directive is used in input form `ngModel` with name attribute `name='first name'` template Variable as `#firstName ='ngModel'`
+
+``` HTML
+<form>
+  <div class= "form-group">
+    <label for="firdtName">First Name</label>
+    <input
+      required
+      minLength="3"
+      maxLength="10"
+      ngModel
+      name="firstName"
+      id="firstName"
+      type="text"
+      class="form-control">
+    <div class="alert alert-danger" 
+      *ngIf="firstName.touched && !firstName.valid" >
+       <div *ngif="firstName.errors.reduired">first name is required</div>
+       <div *ngIf ="firstName.errrors. min length && firstName.errors.maxLength"> length of min{{firstName.errors.minlength.requiredLength}}
+       </div>
+    </div>  
+```
+
+__for submit form__
+

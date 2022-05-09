@@ -12,7 +12,7 @@ export class ViewAllProductComponent implements OnInit {
 
   productList!: Product | any;
   ngOnInit(): void {
-    this.productService.viewProduct().subscribe(data => {
+    this.productService.viewAllProduct().subscribe(data => {
       this.productList = data;
     })
   }
