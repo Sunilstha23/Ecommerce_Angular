@@ -20,8 +20,8 @@
             <div class="text-center">
               <!-- Product name-->
               <h5 class="fw-bolder">
-                <a routerLink="view-product/{{ product.productID }}">{{
-                  product.productName
+                <a routerLink="view-product/{{ product.id }}">{{
+                  product?.productName
                 }}</a>
               </h5>
               <!-- Product price-->
@@ -38,7 +38,7 @@
             <div class="text-center">
               <a
                 class="btn btn-outline-dark mt-auto"
-                routerLink="../../view-product/{{ product.productID }}"
+                routerLink="../../view-product/{{ product.id }}"
                 >View options</a
               >
             </div>

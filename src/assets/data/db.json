@@ -1,7 +1,7 @@
 {
   "product": [
     {
-      "productID": 1,
+      "id": 1,
       "productName": "Partry wear",
       "categoryID": 3,
       "description": "description  first here",
@@ -12,7 +12,7 @@
       "rating": 3
     },
     {
-      "productID": 2,
+      "id": 2,
       "productName": "micro wave",
       "categoryID": 1,
       "description": "Farberware Classic FMO07AHTBKJ 0.7 Cu. Ft. 700-Watt Microwave Oven with LED Lighting, Brushed Stainless Steel",
@@ -23,7 +23,7 @@
       "rating": 4
     },
     {
-      "productID": 3,
+      "id": 3,
       "productName": "black-blue shrit",
       "categoryID": 2,
       "description": "Solids: 100% Cotton; Sport Grey: 90% Cotton, 10% Polyester andTaped neck and shoulders for durability Tubular rib collar for better stretch and recovery",
@@ -34,7 +34,7 @@
       "rating": 3
     },
     {
-      "productID": 4,
+      "id": 4,
       "productName": "Sofa",
       "categoryID": 4,
       "description": "Amazon Brand – Rivet Bigelow Modern Leather Sofa Couch with Wood Base, 89.4'W, Cognac / Espresso",
@@ -45,7 +45,7 @@
       "rating": 5
     },
     {
-      "productID": 5,
+      "id": 5,
       "productName": "Dell Laptop",
       "categoryID": 1,
       "description": "Dell Inspiron 15 3505 Full HD Laptop (FHD), 15.6 inch - AMD Ryzen 5 3450U, 12GB DDR4 RAM, 512GB SSD, AMD Radeon Vega 8 Graphics, Windows Laptop (10) - Black (Latest Model)",
@@ -56,7 +56,7 @@
       "rating": 4
     },
     {
-      "productID": 6,
+      "id": 6,
       "productName": "Mac Book Pro",
       "categoryID": 1,
       "description": "Apple MacBook Air 13.3' with Retina Display, M1 Chip with 8-Core CPU and 7-Core GPU, 16GB Memory, 512GB SSD, Space Gray, Late 2020",
@@ -67,7 +67,7 @@
       "rating": 4
     },
     {
-      "productID": 7,
+      "id": 7,
       "productName": "Arm Chair",
       "categoryID": 4,
       "description": "Christopher Knight Home Felicity Mid-Century Fabric Arm Chair, Charcoal",
@@ -78,7 +78,7 @@
       "rating": 5
     },
     {
-      "productID": 8,
+      "id": 8,
       "productName": "Hoodie for girl",
       "categoryID": 3,
       "description": "No Bad Days Baja Hoodie Mexican Poncho - Cream Rainbow Mini Diamond",
@@ -89,7 +89,7 @@
       "rating": 4
     },
     {
-      "productID": 9,
+      "id": 9,
       "productName": "Smart Tv",
       "categoryID": 1,
       "description": "LG OLED A1 Series 48' Alexa Built-in 4k Smart TV (3840 x 2160), 60Hz Refresh Rate, AI-Powered 4K, Dolby Cinema, WiSA Ready, Gaming Mode (OLED48A1PUA, 2021)",
@@ -100,7 +100,7 @@
       "rating": 3
     },
     {
-      "productID": 10,
+      "id": 10,
       "productName": "Hoodie",
       "categoryID": 2,
       "description": "Taped neck and shoulders for durability; Tubular rib collar for better stretch and recoveryFeels soft to the touch, Tag free; Lays flat",
@@ -110,8 +110,8 @@
       "color": "blue",
       "rating": 4
     },
-       {
-      "productID": 11,
+    {
+      "id": 11,
       "productName": "Teddy Bear",
       "categoryID": 5,
       "description": "GUND Philbin Teddy Bear Stuffed Animal Plush, Chocolate Brown, 12",
@@ -122,7 +122,7 @@
       "rating": 5
     },
     {
-      "productID": 12,
+      "id": 12,
       "productName": "Jeans Short",
       "categoryID": 3,
       "description": "Lee Women's Regular Fit Chino Shortn",
@@ -131,8 +131,9 @@
       "productImg": "./assets/s2.jpg",
       "color": "black",
       "rating": 5
-    }, {
-      "productID": 13,
+    },
+    {
+      "id": 13,
       "productName": "Jeans for men",
       "categoryID": 2,
       "description": "Lee Men's Performance Series Extreme Motion Slim Straight Leg Jean",
@@ -142,8 +143,8 @@
       "color": "black",
       "rating": 5
     },
-     {
-      "productID": 14,
+    {
+      "id": 14,
       "productName": "Carpet",
       "categoryID": 4,
       "description": "Unique Loom Sofia Collection Traditional Vintage Gray Area Rug (4' x 6')",
@@ -153,8 +154,8 @@
       "color": "light orange",
       "rating": 5
     },
-     {
-      "productID": 15,
+    {
+      "id": 15,
       "productName": "Tommee Tippe",
       "categoryID": 5,
       "description": "Tommee Tippee Closer to Nature Baby Bottle, Anti-Colic, Breast-like Nipple, BPA-Free - Extra Slow Flow, 5 Ounce (4 Count), Translucent",
@@ -165,7 +166,7 @@
       "rating": 5
     },
     {
-      "productID": 16,
+      "id": 16,
       "productName": "pamper",
       "categoryID": 5,
       "description": "Pampers Baby Wipes, Sensitive Water Based Baby Diaper Wipes, Hypoallergenic and Unscented,",
@@ -174,6 +175,39 @@
       "productImg": "./assets/pamper.avif",
       "color": "white",
       "rating": 5
+    },
+    {
+      "id": 17,
+      "productName": "pamper",
+      "categoryID": 5,
+      "description": "Pampers Baby Wipes, Sensitive Water Based Baby Diaper Wipes, Hypoallergenic and Unscented,",
+      "price": 500,
+      "is_availble": true,
+      "productImg": "./assets/pamper.avif",
+      "color": "white",
+      "rating": 5
+    },
+    {
+      "id": 18,
+      "productName": "sunil",
+      "categoryID": 1,
+      "description": "asfasdasd",
+      "price": "234",
+      "isAvailable": true,
+      "productImg": "",
+      "color": "red",
+      "rating": 4
+    },
+    {
+      "id": 19,
+      "productName": "",
+      "categoryID": "",
+      "description": "",
+      "price": "",
+      "isAvailable": true,
+      "productImg": "",
+      "color": "",
+      "rating": ""
     }
   ],
   "categories": [

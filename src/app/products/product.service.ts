@@ -1,42 +1,43 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError} from 'rxjs';
 import { Category } from '../site-layout/sidebar/category';
 import { Product } from './product';
 
 @Injectable({
   providedIn: 'root'
 })
-  
 export class ProductService {
+
 
   constructor(private httpClient: HttpClient) { }
   
-  createProduct(addProduct: any):Observable<Product>{
-    const baseUrl = "http://localhost:5000/product";
-    console.log(addProduct.categoryID);
-    return this.httpClient.post<Product>(baseUrl, addProduct);
+  createProduct(addProduct: any):Observable<Product[]>{
+    const baseUrl = `http://localhost:5000/product`;
+    return this.httpClient.post<Product[]>(baseUrl, addProduct);
   }
 
-  updateProduct(productID: number, productBody: Product): Observable<Product>{
+  updateProduct(productID: number, productBody: Product): Observable<Product[]>{
       console.log(productBody);
-      const baseUrl = 'http://localhost:5000/product?productID=' + productID;
-    return this.httpClient.put<Product>(baseUrl, productBody);
+      const baseUrl = 'http://localhost:5000/product?id=' + productID;
+    return this.httpClient.put<Product[]>(baseUrl, productBody).pipe(catchError(this.handleError));;
   }
 
-  viewAllProduct():Observable<Product>{
+  //get all product list
+  viewAllProduct():Observable<Product[]>{
     const viewUrl = 'http://localhost:5000/product/';
-    return this.httpClient.get<Product>(viewUrl); 
+    return this.httpClient.get<Product[]>(viewUrl).pipe(catchError(this.handleError)); 
   }
 
   viewProduct(productId: number): Observable<Product>{      
-    const baseUrl = 'http://localhost:5000/product?productID=' + productId;
+    const baseUrl = 'http://localhost:5000/product?id=' + productId;
     // console.log(baseUrl)
     return this.httpClient.get<Product>(baseUrl); 
     }
   
-    deleteProduct(productID: any):Observable<Product>{
-    const baseUrl = 'http://localhost:5000/product/'+productID;
+    deleteProduct(productID: number):Observable<Product>{
+      const baseUrl = 'http://localhost:5000/product/id=' + productID;
+      console.log(productID)
     return this.httpClient.delete<Product>(baseUrl); 
     }
   
@@ -50,5 +51,17 @@ export class ProductService {
       return this.httpClient.get<Category>(CategoryUrl); 
       // console.log(this.httpClient.get<Category>(CategoryUrl));
       
+    }
+  
+  public handleError(error: HttpErrorResponse) {
+    let errorMessage: string = '';
+    if (error.error instanceof ErrorEvent) {
+      //client Error
+      errorMessage = `Error: ${error.error.message}`
+    } else {
+      //server error
+      errorMessage = `Status: ${error.status} \n Message: ${error.message}`;
+    }
+    return throwError(errorMessage);
   }
 }

@@ -10,26 +10,41 @@ import { ProductService } from '../product.service';
 })
 export class UpdateProductComponent implements OnInit {
 
-  productID = 0;
-  productDetails: Product[]=[];
+  id: number= 0;
+  productDetails: any ={};
+  compare: Product = {
+    id: 0,
+    productName: '',
+    categoryID: 0,
+    description: '',
+    price: 0,
+    isAvailable: true,
+    productImg: '',
+    color: '',
+    rating: '',
+    
+  };
+  
 
-  constructor(private activatedRoute: ActivatedRoute, private productService: ProductService) { }
+  constructor(private activatedRoute: ActivatedRoute, private productService: ProductService) {
+
+  }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(data => {
-      this.productID = data['id'];
+      this.id = data['id'];
 
-      this.productService.viewProduct(this.productID).subscribe(productData => {
+      this.productService.viewProduct(this.id).subscribe(productData => {
         // this.productDetails = productData;
-        Object.assign(this.productDetails, productData);
-        console.log(this.productDetails);
+        this.productDetails = productData;
+        // console.log(this.productDetails);
       })
     })
 
   }
   updateProduct(form: any) {
     const updateProduct = {
-      productID: this.productID,
+      id: this.id,
       productName: form.value.productName,
       categoryID: form.value.categoryID,
       description: form.value.description,
@@ -41,6 +56,6 @@ export class UpdateProductComponent implements OnInit {
     };
     console.log(form);
 
-    this.productService.updateProduct(this.productID, updateProduct).subscribe(data => console.log(data.description))
+    this.productService.updateProduct(this.id, updateProduct).subscribe(data => console.log(data))
   }
 }

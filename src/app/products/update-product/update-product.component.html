@@ -12,7 +12,7 @@
       class="form-control"
       required
       name="productName"
-      ngModel
+      [value]="productDetails[0]?.productName"
       [(ngModel)]="productDetails[0].productName"
     />
   </div>
@@ -23,7 +23,7 @@
       id="validationServer04"
       aria-describedby="validationServer04Feedback"
       required
-      ngModel
+      [value]="productDetails[0]?.categoryID"
       name="categoryID"
       [(ngModel)]="productDetails[0].categoryID"
     >
@@ -41,8 +41,8 @@
       class="form-select"
       id="validationServer04"
       required
+      [value]="productDetails[0]?.isAvailable"
       name="isAvailable"
-      ngModel
       [(ngModel)]="productDetails[0].isAvailable"
     >
       <option selected disabled>Choose...</option>
@@ -58,7 +58,7 @@
       id="validationServer01"
       required
       name="color"
-      ngModel
+      [value]="productDetails[0]?.color"
       [(ngModel)]="productDetails[0].color"
     />
   </div>
@@ -71,7 +71,7 @@
       aria-describedby="validationServer04Feedback"
       required
       name="rating"
-      ngModel
+      [value]="productDetails[0]?.rating"
       [(ngModel)]="productDetails[0].rating"
     >
       <option selected disabled value="">Choose...</option>
@@ -92,7 +92,7 @@
       aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback"
       required
       name="price"
-      ngModel
+      [value]="productDetails[0]?.price"
       [(ngModel)]="productDetails[0].price"
     />
   </div>
@@ -104,8 +104,8 @@
       id="validationTextarea"
       placeholder="product detail description"
       required
+      [value]="productDetails[0]?.description"
       name="description"
-      ngModel
       [(ngModel)]="productDetails[0].description"
     ></textarea>
   </div>

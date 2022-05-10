@@ -5,28 +5,28 @@
       <div class="col-md-6">
         <img
           class="card-img-top mb-5 mb-md-0"
-          src="{{ productData[0].productImg }}"
+          src="{{ productData[0]?.productImg }}"
           alt="..."
         />
       </div>
       <div class="col-md-6">
-        <h3>{{ productData[0].productName }}</h3>
+        <h3>{{ productData[0]?.productName }}</h3>
         <div class="small mb-1">SKU: BST-498</div>
-        <h1 class="display-5 fw-bolder">{{ productID }}</h1>
+        <h1 class="display-5 fw-bolder">{{ id }}</h1>
         <div class="fs-5 mb-5">
-          <span>{{ productData[0].price }}</span>
+          <span>{{ productData[0]?.price }}</span>
         </div>
         <p class="lead">
-          {{ productData[0].description }}
+          {{ productData[0]?.description }}
         </p>
         <div class="d-flex">
           <a
-            href="/products/update-product/{{ productData[0].productID }}"
+            href="/products/update-product/{{ productData[0]?.id }}"
             class="btn btn-primary m-1"
             >update product</a
           >
           <a
-            href="/products/delete-product/{{ productData[0].productID }}"
+            href="/products/delete-product/{{ productData[0]?.id }}"
             class="btn btn-danger flex-shrink-0 m-1"
             >Delete</a
           >
@@ -61,17 +61,17 @@
           <!-- Product image-->
           <img
             class="card-img-top"
-            src="{{ product.productImg }}"
-            alt="{{ product.productName }}"
+            src="{{ product?.productImg }}"
+            alt="{{ product?.productName }}"
             height="150px"
           />
           <!-- Product details-->
           <div class="card-body p-4">
             <div class="text-center">
               <!-- Product name-->
-              <h5 class="fw-bolder">{{ product.productName }}</h5>
+              <h5 class="fw-bolder">{{ product?.productName }}</h5>
               <!-- Product price-->
-              {{ product.price }}
+              {{ product?.price }}
             </div>
           </div>
           <!-- Product actions-->
@@ -79,7 +79,7 @@
             <div class="text-center">
               <a
                 class="btn btn-outline-dark mt-auto"
-                routerLink="../{{ product.productID }}"
+                routerLink="../{{ product.id }}"
                 onclick="moveup()"
                 >View options</a
               >

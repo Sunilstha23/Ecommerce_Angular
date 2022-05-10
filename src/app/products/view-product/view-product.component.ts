@@ -13,7 +13,7 @@ declare function moeup(): void;
 
 export class ViewProductComponent implements OnInit {
 
-  productID = 0;
+  id = 0;
   productData!: Product[];
   productList!: Product | any;
 
@@ -24,12 +24,13 @@ export class ViewProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(data => {
-      this.productID = data['id'];
-      this.productService.viewProduct(this.productID).subscribe(viewData => {
+      this.id = data['id'];
+      console.log(this.id);
+      this.productService.viewProduct(this.id).subscribe(viewData => {
         Object.assign(this.productData, viewData);
-        // console.log(typeof (this.productData[0].categoryID));
+        console.log(this.productData);
       
-        this.productService.searchCategoryProduct(this.productData[0].categoryID).subscribe(data => {
+        this.productService.searchCategoryProduct(this.productData[0]?.categoryID).subscribe(data => {
           this.productList = data
           console.log(this.productList)
         });

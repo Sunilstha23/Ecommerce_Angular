@@ -1,10 +1,10 @@
 export interface Product {
-    productID?: number;
+    id?: number;
     productName: string;
     categoryID: number;
     description: string;
     price: number;
-    isAvailable: boolean;
+    isAvailable?: boolean;
     productImg?: string;
     color: string;
     rating: string;

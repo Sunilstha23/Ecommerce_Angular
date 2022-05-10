@@ -8,16 +8,18 @@ import { ProductService } from '../product.service';
   styleUrls: ['./delete-product.component.css']
 })
 export class DeleteProductComponent implements OnInit {
-  productId = 0;
-  constructor( private activateRoute: ActivatedRoute, private productService: ProductService) { }
+  id: number = 0;
+
+  constructor(private activateRoute: ActivatedRoute, private productService: ProductService) { }
 
   ngOnInit(): void {
     this.activateRoute.params.subscribe(data => {
-      this.productId = data['id'];
+      this.id = data['id'];
 
-      this.productService.deleteProduct(this.productId).subscribe(_data =>
-        console.log("deleted data"))
-    })
-  }
-
+      this.productService.deleteProduct(this.id).subscribe(data => {
+        console.log(data);
+      });
+    });
 }
+}
+
