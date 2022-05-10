@@ -156,14 +156,15 @@
     },
     {
       "id": 15,
-      "productName": "Tommee Tippe",
+      "productName": "Tommee",
       "categoryID": 5,
       "description": "Tommee Tippee Closer to Nature Baby Bottle, Anti-Colic, Breast-like Nipple, BPA-Free - Extra Slow Flow, 5 Ounce (4 Count), Translucent",
       "price": 5,
       "is_availble": true,
-      "productImg": "./assets/bab.jpg",
+      "productImg": "",
       "color": "black",
-      "rating": 5
+      "rating": 5,
+      "isAvailable": true
     },
     {
       "id": 16,
@@ -186,28 +187,6 @@
       "productImg": "./assets/pamper.avif",
       "color": "white",
       "rating": 5
-    },
-    {
-      "id": 18,
-      "productName": "sunil",
-      "categoryID": 1,
-      "description": "asfasdasd",
-      "price": "234",
-      "isAvailable": true,
-      "productImg": "",
-      "color": "red",
-      "rating": 4
-    },
-    {
-      "id": 19,
-      "productName": "",
-      "categoryID": "",
-      "description": "",
-      "price": "",
-      "isAvailable": true,
-      "productImg": "",
-      "color": "",
-      "rating": ""
     }
   ],
   "categories": [

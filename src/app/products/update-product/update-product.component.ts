@@ -11,23 +11,23 @@ import { ProductService } from '../product.service';
 export class UpdateProductComponent implements OnInit {
 
   id: number= 0;
-  productDetails: any ={};
-  compare: Product = {
-    id: 0,
-    productName: '',
-    categoryID: 0,
-    description: '',
-    price: 0,
-    isAvailable: true,
-    productImg: '',
-    color: '',
-    rating: '',
+  productDetails!: Product[];
+  // compare: Product = {
+  //   id: 0,
+  //   productName: '',
+  //   categoryID: 0,
+  //   description: '',
+  //   price: 0,
+  //   isAvailable: true,
+  //   productImg: '',
+  //   color: '',
+  //   rating: '',
     
-  };
+  // };
   
 
   constructor(private activatedRoute: ActivatedRoute, private productService: ProductService) {
-
+    this.productDetails = [];
   }
 
   ngOnInit(): void {
@@ -36,13 +36,15 @@ export class UpdateProductComponent implements OnInit {
 
       this.productService.viewProduct(this.id).subscribe(productData => {
         // this.productDetails = productData;
-        this.productDetails = productData;
-        // console.log(this.productDetails);
+         console.log(productData);
+        Object.assign(this.productDetails, productData);
+         console.log(typeof(this.productDetails[0].productName));
+       
       })
     })
 
   }
-  updateProduct(form: any) {
+  updateProduct(form?: any) {
     const updateProduct = {
       id: this.id,
       productName: form.value.productName,

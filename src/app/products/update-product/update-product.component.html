@@ -12,9 +12,10 @@
       class="form-control"
       required
       name="productName"
-      [value]="productDetails[0]?.productName"
+      *ngIf="productDetails[0]?.productName"
       [(ngModel)]="productDetails[0].productName"
     />
+    <pre>{{productDetails[0].productName|json}}hello</pre>
   </div>
   <div class="col-md-3">
     <label for="validationServer04" class="form-label">Category</label>

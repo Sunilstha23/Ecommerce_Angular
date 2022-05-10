@@ -19,8 +19,8 @@ export class ProductService {
 
   updateProduct(productID: number, productBody: Product): Observable<Product[]>{
       console.log(productBody);
-      const baseUrl = 'http://localhost:5000/product?id=' + productID;
-    return this.httpClient.put<Product[]>(baseUrl, productBody).pipe(catchError(this.handleError));;
+      const baseUrl = 'http://localhost:5000/product/' + productID;
+    return this.httpClient.patch<Product[]>(baseUrl, productBody).pipe(catchError(this.handleError));;
   }
 
   //get all product list
@@ -36,7 +36,7 @@ export class ProductService {
     }
   
     deleteProduct(productID: number):Observable<Product>{
-      const baseUrl = 'http://localhost:5000/product/id=' + productID;
+      const baseUrl = 'http://localhost:5000/product/' + productID;
       console.log(productID)
     return this.httpClient.delete<Product>(baseUrl); 
     }

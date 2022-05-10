@@ -1,3 +1,4 @@
+// import { NgModule } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -10,7 +11,9 @@ import { ViewProductComponent } from './view-product/view-product.component';
 import { ViewAllProductComponent } from './view-all-product/view-all-product.component';
 import { ViewProductByDateComponent } from './view-product-by-date/view-product-by-date.component';
 import { ViewsProductByCategoryComponent } from './views-product-by-category/views-product-by-category.component';
+// import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     ProductsComponent,
